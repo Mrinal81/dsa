@@ -34,4 +34,4 @@ import java.util.*;
 
   //try with 55 and 6
 
-  //  log2(16)=4 comparision
+  //  log2(16)=4 comparison
