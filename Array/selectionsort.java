@@ -6,7 +6,7 @@ import java.util.*;
 
   public class selectionsort {
       public static void main(String args[]) throws IOException {
-          int arr[] = { 99,88,66,77,55};
+          int arr[] = { 99, 88, 66, 77, 55 };
           selection(arr);
 
           for (int i = 0; i < arr.length; i++) {
@@ -14,25 +14,24 @@ import java.util.*;
           }
       }
 
-
-
       public static void selection(int[] a) {
 
-          for (int i = 0; i < a.length - 1; i++) {
-              int min = i;
-              for (int j = i + 1; j <= a.length - 1; j++) {
-                  if (a[j] < a[min]) {
+          for (int counter = 0; counter < a.length; counter++) {
+              int min = counter;
+
+              for (int j = counter + 1; j <= a.length - 1; j++) {
+                  if (a[min] > a[j]) {
                       min = j;
                   }
-
               }
-              int temp = a[i];
-                  a[i] = a[min];
-                  a[min] = temp;
-        }
 
-                 }
+              int temp = a[counter];
+              a[counter] = a[min];
+              a[min] = temp;
+
           }
+      }
+  }
 
 
 
